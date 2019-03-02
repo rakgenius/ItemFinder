@@ -26,5 +26,6 @@ HELP.md
 /build/
 
 /target/
-/frontend/npm_modules/
+/frontend/npm_modules
 /frontend/build/
+/frontend/node_modules/
