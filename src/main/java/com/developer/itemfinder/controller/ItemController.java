@@ -63,7 +63,7 @@ public class ItemController {
     }
 
     @PostMapping("/newitem")
-    public ResponseEntity<Item> createNewItem(@Valid @RequestBody Item item) {
+    public ResponseEntity<Item> createNewItem(@RequestBody Item item) {
         //item.setName(item.getName().toLowerCase());
         //item.setLocation(item.getLocation().toLowerCase());
         log.info("Creating new item : {}", item);

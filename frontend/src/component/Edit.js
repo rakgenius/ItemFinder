@@ -15,7 +15,6 @@ class Edit extends Component {
         axios.get('/item/'+this.props.match.params.id)
             .then(res => {
                 this.setState({ item: res.data });
-                console.log(this.state.item);
             });
     }
 
@@ -30,9 +29,6 @@ class Edit extends Component {
 
         const { name, location, quantity } = this.state.item;
 
-        console.log(name);
-        console.log(location);
-        console.log(quantity);
         axios.put('/item/edit/'+this.props.match.params.id, { name, location, quantity })
             .then((result) => {
                 this.props.history.push("/show/"+this.props.match.params.id)

@@ -20,7 +20,6 @@ ReactDOM.render(
         <Route path='/search' component={Search} />
         <Route path='/add' component={Create} />
         <Route path='/error' component={Error} />
-        <Route path='/newitem' component={Create} />
         <Route path='/show/:id' component={Show} />
         <Route path='/showitem/:id' component={ShowItem} />
         <Route path='/edit/:id' component={Edit} />

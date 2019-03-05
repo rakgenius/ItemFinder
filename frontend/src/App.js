@@ -12,7 +12,6 @@ class App extends Component {
     }
 
     search = (e) => {
-        console.log("coming inside the function search");
         axios.get('/')
             .then((result) => {
             this.props.history.push("/search/")
@@ -27,10 +26,9 @@ class App extends Component {
     };
 
     add = (e) => {
-        console.log("coming inside the function add");
         axios.get('/')
             .then((result) => {
-        this.props.history.push("/add/")
+                this.props.history.push("/add")
         });
     };
 

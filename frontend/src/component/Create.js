@@ -23,7 +23,6 @@ class Create extends Component {
         e.preventDefault();
 
         const { name, location, quantity } = this.state;
-
         axios.post('/item/newitem', { name, location, quantity })
             .then((result) => {
             this.props.history.push("/")

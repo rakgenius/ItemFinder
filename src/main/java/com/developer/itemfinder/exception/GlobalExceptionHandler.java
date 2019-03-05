@@ -29,5 +29,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Object> handleIllegalArgumentException(final IllegalArgumentException e) {
+        ErrorResponse errorResponse = ErrorResponse
+                .of(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+    }
 }
